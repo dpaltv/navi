@@ -35,7 +35,7 @@ jobs:
         run: |
           CURRENT="${{ steps.get-version.outputs.version }}"
           PREVIOUS="${{ steps.get-previous.outputs.previous }}"
-          
+
           if [ "$CURRENT" = "$PREVIOUS" ]; then
             echo "❌ ERROR: Version has not been incremented!"
             echo "Current version: $CURRENT"
@@ -43,7 +43,7 @@ jobs:
             echo "Please increment the version in build.gradle.kts before publishing."
             exit 1
           fi
-          
+
           echo "✅ Version check passed"
           echo "Previous: $PREVIOUS → Current: $CURRENT"
           echo "should-publish=true" >> $GITHUB_OUTPUT
@@ -89,12 +89,12 @@ jobs:
             ## 📦 Maven Central
             ```gradle
             dependencies {
-                implementation("tv.dpal:swipenavhost:${{ needs.version-check.outputs.version }}")
+                implementation("tv.dpal:navi:${{ needs.version-check.outputs.version }}")
             }
             ```
-            
+
             ## 📚 Documentation
-            
+
             See the [README](https://github.com/${{ github.repository }}) for usage examples and API documentation.
           draft: false
           prerelease: false

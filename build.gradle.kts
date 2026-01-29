@@ -15,9 +15,6 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            // TODO: Replace with published dependencies when available
-            // api("tv.dpal:flowvi-core:<version>")
-            // implementation("tv.dpal:logging:<version>")
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.serialization)
             implementation(compose.runtime)
@@ -26,9 +23,6 @@ kotlin {
             implementation(compose.material3)
             implementation("org.jetbrains.compose.material3.adaptive:adaptive:1.2.0")
         }
-        androidMain.dependencies {
-            // no-op
-        }
         commonTest.dependencies {
             implementation(kotlin("test"))
         }
@@ -36,7 +30,7 @@ kotlin {
 }
 
 android {
-    namespace = "tv.dpal.swipenavhost"
+    namespace = "tv.dpal.navi"
     compileSdk = 36
     defaultConfig { minSdk = 24 }
     buildFeatures { compose = true }
@@ -46,14 +40,14 @@ android {
 mavenPublishing {
     coordinates(
         groupId = "tv.dpal",
-        artifactId = "swipenavhost",
+        artifactId = "navi",
         version = "0.1.0"
     )
 
     pom {
-        name.set("SwipeNavHost")
-        description.set("Swipeable navigation component for Compose Multiplatform with MVI integration")
-        url.set("https://github.com/yourusername/swipenavhost")
+        name.set("Navi")
+        description.set("Navigation Controller and SwipeableNavHost for Compose Multiplatform")
+        url.set("https://github.com/dpaltv/navi")
 
         licenses {
             license {
@@ -64,16 +58,16 @@ mavenPublishing {
 
         developers {
             developer {
-                id.set("yourusername")
-                name.set("Your Name")
-                email.set("your.email@example.com")
+                id.set("eholtrop")
+                name.set("Evan Holtrop")
+                email.set("admin@dangeroustoplayalone.com")
             }
         }
 
         scm {
-            connection.set("scm:git:git://github.com/yourusername/swipenavhost.git")
-            developerConnection.set("scm:git:ssh://github.com/yourusername/swipenavhost.git")
-            url.set("https://github.com/yourusername/swipenavhost")
+            connection.set("scm:git:git://github.com/dpaltv/navi.git")
+            developerConnection.set("scm:git:ssh://github.com/dpaltv/navi.git")
+            url.set("https://github.com/dpaltv/navi")
         }
     }
 }

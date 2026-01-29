@@ -1,4 +1,4 @@
-rootProject.name = "swipenavhost"
+rootProject.name = "navi"
 
 pluginManagement {
     repositories {

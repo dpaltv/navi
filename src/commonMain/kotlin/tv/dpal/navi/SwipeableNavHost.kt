@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package tv.dpal.swipenavhost
+package tv.dpal.navi
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateContentSize

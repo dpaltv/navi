@@ -103,13 +103,13 @@ Until published:
 
 ```kotlin
 // settings.gradle.kts
-include(":swipenavhost")
+include(":navi")
 
 // build.gradle.kts
 kotlin {
     sourceSets {
         commonMain.dependencies {
-            implementation(project(":swipenavhost"))
+            implementation(project(":navi"))
         }
     }
 }
@@ -119,7 +119,7 @@ When published:
 
 ```kotlin
 dependencies {
-    implementation("tv.dpal:swipenavhost:<version>")
+    implementation("tv.dpal:navi:<version>")
 }
 ```
 

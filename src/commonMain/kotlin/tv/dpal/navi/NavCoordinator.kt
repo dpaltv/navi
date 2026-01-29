@@ -1,4 +1,4 @@
-package tv.dpal.swipenavhost
+package tv.dpal.navi
 
 import kotlinx.coroutines.flow.StateFlow
 
