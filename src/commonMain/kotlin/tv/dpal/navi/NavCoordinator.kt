@@ -27,7 +27,9 @@ interface NavCoordinator {
     fun updateCurrentIndex(index: Int)
 
     /**
-     * Navigates the user back one page, returns true if the navigation was handled, false if nothing happens (ie. you need to handle it yourself)
+     * Navigates the user back one page,
+     * returns true if the navigation was handled,
+     * false if nothing happens (ie. you need to handle it yourself)
      */
     fun onBackPressed(keepStack: Boolean = true): Boolean
 
